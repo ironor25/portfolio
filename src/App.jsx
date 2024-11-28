@@ -156,7 +156,7 @@ const BlockchainPortfolio = () => {
         </div>
         <div>
 
-            <img src='src\assets\myimg3.png'></img>
+            <img src='\myimg3.png'></img>
             <div className="w-80 h-1 bg-orange-300"></div>
         </div>
         </div>
@@ -240,13 +240,13 @@ const BlockchainPortfolio = () => {
           <h2 className="text-3xl font-bold mb-12">Get In Touch</h2>
           <div className="flex justify-center space-x-36">
             <a href="https://www.linkedin.com/in/deepak-yadav-781088260/" className="hover:text-blue-400 transition-colors" target="_blank">
-            <img src="src\assets\linkedin.svg" className='h-40 w-40'></img>
+            <img src="\linkedin.svg" className='h-40 w-40'></img>
             </a>
             <a href="https://github.com/ironor25" className="hover:text-blue-400 transition-colors" target="_blank">
-              <img src="src\assets\github.svg" className='h-40 w-40'></img>
+              <img src="\github.svg" className='h-40 w-40'></img>
             </a>
             <a href="https://x.com/ironor25" className="hover:text-blue-400 transition-colors" target="_blank">
-            <img src="src\assets\twitter.svg" className='h-40 w-40'></img>
+            <img src="\twitter.svg" className='h-40 w-40'></img>
             </a>
           </div>
         </div>
