@@ -149,7 +149,7 @@ const BlockchainPortfolio = () => {
             <a href="#projects" className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg transition-colors">
               View Projects
             </a>
-            <a href="https://drive.google.com/file/d/1AXGMasK3QiFgGi9a432Dxb23e07YKuzn/view?usp=drive_link" target='_blank' className="border border-blue-500 hover:bg-blue-500/10 px-6 py-3 rounded-lg transition-colors">
+            <a href="https://drive.google.com/file/d/1dMGcWC3bJvqr9VM158Ad3KlPi8WsAMy3/view?usp=sharing" target='_blank' className="border border-blue-500 hover:bg-blue-500/10 px-6 py-3 rounded-lg transition-colors">
               My CV
             </a>
           </div>
