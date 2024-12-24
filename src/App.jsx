@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import { ExportOutlined } from '@ant-design/icons';
 
 const BlockchainPortfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -73,12 +74,16 @@ const BlockchainPortfolio = () => {
     {
       title: "Unified Voting Interface(U.V.I)",
       description: "A decentralized voting interface for tamper-proof voting",
-      tags: ["Javascript", "Ether.js", "Solidity","HTML/CSS"]
+      tags: ["Javascript", "Ether.js", "Solidity","HTML/CSS"],
+      link: "https://ironor25.github.io/",
+      image: "./uvi_img.png"
     },
     {
       title: "Flash Wallet",
-      description: "A decentralized Web-3 wallet for fast transaction",
-      tags: ["Javascript", "Ether.js","Express.js","Tailwind CSS","React.js","Moralis SDKs"]
+      description: "A decentralized Web3 wallet for managing your digital assets",
+      tags: ["Javascript", "Ether.js", "React.js","Express.js","TailwindCSS","Moralis SDK","Ant Design UI"],
+      link: "https://flash-tan.vercel.app/",
+      image: "./wallet_img.png"
     }
     
   ];
@@ -160,8 +165,7 @@ const BlockchainPortfolio = () => {
           </div>
         </div>
         <div>
-
-            <img src='\myimg3.png'></img>
+            <img src='./myimg3.png'></img>
             <div className="w-80 h-1 bg-orange-300"></div>
         </div>
         </div>
@@ -175,7 +179,8 @@ const BlockchainPortfolio = () => {
       {skills.map((skillCategory, index) => (
         <div
           key={index}
-          className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-gray-800/70 transition-all hover:shadow-xl hover:shadow-blue-500/50"
+          className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6
+           hover:bg-gray-800/70 transition-all hover:shadow-xl hover:shadow-blue-500/50"
         >
           <h3 className="text-xl font-bold mb-6 text-center text-blue-400">
             {skillCategory.category}
@@ -184,7 +189,8 @@ const BlockchainPortfolio = () => {
             {skillCategory.items.map((skill, skillIndex) => (
               <span
                 key={skillIndex}
-                className="bg-blue-500/10 hover:bg-blue-500/20 hover:shadow-lg hover:shadow-blue-500/50 text-blue-300 px-4 py-2 rounded-lg text-sm transition-all"
+                className="bg-blue-500/10 hover:bg-blue-500/20 hover:shadow-lg
+                 hover:shadow-blue-500/50 text-blue-300 px-4 py-2 rounded-lg text-sm transition-all"
               >
                 {skill}
               </span>
@@ -200,26 +206,49 @@ const BlockchainPortfolio = () => {
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4">
-        <a href='https://ironor25.github.io/' target='_blank'>
+        
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 hover:transform hover:scale-105 transition-all">
-              
-                <h1 className="text-2xl font-bold mb-5 ">{project.title}</h1>
-                <p className="text-gray-400 mb-4">{project.description}</p>
+              <div className="max-w-sm rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
+              {/* Project Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+        
+              {/* Project Details */}
+              <div className="p-6">
+                {/* Project Name */}
+                <a href={project.link} target='_blank'>
+                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                  {project.title} <ExportOutlined />
+                </h2>
+                </a>
+                <h4 className=" font-bold text-gray-800 mb-4">
+                  {project.description}
+                </h4>
+        
+                {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
-                      {tag}
+                  {project.tags.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 text-sm font-medium rounded-full bg-blue-100 text-blue-800"
+                    >
+                      {tech}
                     </span>
                   ))}
                 </div>
               </div>
+            </div>
             ))}
           </div>
-        </div></a>
+        </div>
       </section>
 
       {/* Experience Section */}
@@ -245,13 +274,13 @@ const BlockchainPortfolio = () => {
           <h2 className="text-3xl font-bold mb-12">Get In Touch</h2>
           <div className="flex justify-center space-x-36">
             <a href="https://www.linkedin.com/in/deepak-yadav-781088260/" className="hover:text-blue-400 transition-colors" target="_blank">
-            <img src="\linkedin.svg" className='h-40 w-40'></img>
+            <img src="./linkedin.svg" className='h-40 w-40'></img>
             </a>
             <a href="https://github.com/ironor25" className="hover:text-blue-400 transition-colors" target="_blank">
-              <img src="\github.svg" className='h-40 w-40'></img>
+              <img src="./github.svg" className='h-40 w-40'></img>
             </a>
             <a href="https://x.com/ironor25" className="hover:text-blue-400 transition-colors" target="_blank">
-            <img src="\twitter.svg" className='h-40 w-40'></img>
+            <img src="./twitter.svg" className='h-40 w-40'></img>
             </a>
           </div>
         </div>
