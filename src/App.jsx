@@ -74,6 +74,11 @@ const BlockchainPortfolio = () => {
       title: "Unified Voting Interface(U.V.I)",
       description: "A decentralized voting interface for tamper-proof voting",
       tags: ["Javascript", "Ether.js", "Solidity","HTML/CSS"]
+    },
+    {
+      title: "Flash Wallet",
+      description: "A decentralized Web-3 wallet for fast transaction",
+      tags: ["Javascript", "Ether.js","Express.js","Tailwind CSS","React.js","Moralis SDKs"]
     }
     
   ];
