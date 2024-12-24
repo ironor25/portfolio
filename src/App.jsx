@@ -24,7 +24,7 @@ const BlockchainPortfolio = () => {
         "React",
         "TailwindCSS",
         "JavaScript",
-        "HTML/CSS",,
+        "HTML/CSS",
         "Python"
       ]
     },
@@ -146,14 +146,14 @@ const BlockchainPortfolio = () => {
         <div className="max-w-4xl text-left mr-60">
           <div className="text-blue-400 mb-4">Welcome to my portfolio</div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Blockchain Developer &
+            I'm Deepak Yadav
             
           </h1>
           <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent text-4xl md:text-6xl font-bold mb-6">
-              {" "}Crypto Researcher
+              {" "}A Blockchain Developer
         </span>
-          <p className="text-xl text-gray-300 mb-8 mt-6">
-            Decentralisation is Future
+          <p className="text-3xl text-gray-300 mb-8 mt-6">
+            & A Crypto Researcher
           </p>
           <div className="flex space-x-9 mt-28">
             <a href="#projects" className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg transition-colors">
@@ -211,7 +211,7 @@ const BlockchainPortfolio = () => {
           <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div className="max-w-sm rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
+              <div key={index} className="max-w-sm rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
                 <img 
