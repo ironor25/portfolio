@@ -79,11 +79,7 @@ const BlockchainPortfolio = () => {
             className="md:hidden text-gray-300" 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-             <div className="space-y-2">
-                <span className="block w-8 h-0.5 bg-gray-300"></span>
-                <span className="block w-8 h-0.5 bg-gray-300"></span>
-                <span className="block w-8 h-0.5 bg-gray-300"></span>
-              </div>
+            {isMenuOpen ? 'Close' : 'Menu'}
           </button>
         </div>
         {/* Mobile Navigation */}
@@ -116,7 +112,7 @@ const BlockchainPortfolio = () => {
             </div>
           </div>
           <div className="mt-10 md:mt-0">
-            <img src="./myimg3.png" alt="Deepak Yadav" className="w-48 h-48 md:w-64 md:h-72 rounded-full" />
+            <img src="./myimg3.png" alt="Deepak Yadav" className="w-48 h-48 md:w-64 md:h-64 rounded-full" />
           </div>
         </div>
       </section>
@@ -224,13 +220,13 @@ const BlockchainPortfolio = () => {
           <h2 className="text-3xl font-bold mb-12">Get In Touch</h2>
           <div className="flex justify-center space-x-36">
             <a href="https://www.linkedin.com/in/deepak-yadav-781088260/" className="hover:text-blue-400 transition-colors" target="_blank">
-            <img src="./linkedin.svg" className='h-64 w-64'></img>
+            <img src="./linkedin.svg" className='h-40 w-40'></img>
             </a>
             <a href="https://github.com/ironor25" className="hover:text-blue-400 transition-colors" target="_blank">
-              <img src="./github.svg" className='h-64 w-64'></img>
+              <img src="./github.svg" className='h-40 w-40'></img>
             </a>
             <a href="https://x.com/ironor25" className="hover:text-blue-400 transition-colors" target="_blank">
-            <img src="./twitter.svg" className='h-64 w-64'></img>
+            <img src="./twitter.svg" className='h-40 w-40'></img>
             </a>
           </div>
         </div>
