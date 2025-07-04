@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 
 const iconLinkClass =
-  'group relative hover:px-6 pr-3 pl-3 transition-all duration-300 cursor-pointer';
+  'group relative px-2 sm:hover:px-6 sm:pr-3 sm:pl-3 py-2 sm:py-0 transition-all duration-300 cursor-pointer';
 const borderRightClass = 'border-r-2';
 
 const Tooltip = ({ label }) => (
@@ -27,8 +27,8 @@ const Header = (props) => {
 
   return (
     <div className="p-1 sm:p-3 flex justify-center z-20 text-black dark:text-white transition-colors duration-300">
-      <nav className="max-w-2xl w-full rounded-3xl py-1 sm:py-3 px-1 sm:px-4 border-2 border-black dark:border-white fixed backdrop-blur-lg flex overflow-x-auto whitespace-nowrap space-x-1 sm:space-x-6 justify-center">
-        <div className="flex items-center space-x-1 sm:space-x-4 w-auto">
+      <nav className="max-w-2xl w-full rounded-3xl py-1 sm:py-3 px-1 sm:px-4 border-2 border-black dark:border-white fixed backdrop-blur-lg flex overflow-x-auto whitespace-nowrap space-x-1 sm:space-x-6 justify-center scrollbar-thin scrollbar-thumb-zinc-300 dark:scrollbar-thumb-zinc-700 scrollbar-track-transparent">
+        <div className="flex items-center space-x-1 sm:space-x-4 w-auto min-w-0">
           {/* Navigation Links */}
           <a href="#hero" className={iconLinkClass} aria-label="Home">
             <House />
@@ -43,7 +43,7 @@ const Header = (props) => {
             <Tooltip label="Skills" />
           </a>
           <a
-            href="https://drive.google.com/file/d/13BOrFs16XgV9SGtiCmphwEGlGfZE1LYO/view?usp=sharing"
+            href="https://drive.google.com/file/d/1UFLxDGzzWquDdcHmF6ffMzVfV3dGuIWM/view?usp=sharing"
             target="_blank"
             className={iconLinkClass}
             aria-label="Resume"
