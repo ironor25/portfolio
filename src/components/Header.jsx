@@ -43,7 +43,7 @@ const Header = (props) => {
             <Tooltip label="Skills" />
           </a>
           <a
-            href="https://drive.google.com/file/d/1UFLxDGzzWquDdcHmF6ffMzVfV3dGuIWM/view?usp=sharing"
+            href="https://drive.google.com/file/d/1PdEDnMr1l8_MOVYtBoliBtkidJ3bgzAT/view?usp=sharing"
             target="_blank"
             className={iconLinkClass}
             aria-label="Resume"
