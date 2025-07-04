@@ -12,7 +12,7 @@ const Contact = (props) => {
     e.preventDefault();
     setLoading(true);
     axios
-      .post("http://localhost:3000/send", { email, message })
+      .post("https://portfolio-p3wg.onrender.com/send", { email, message })
       .then((res) => {
         alert("Message sent!");
         setEmail("");
