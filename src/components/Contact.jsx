@@ -25,20 +25,20 @@ const Contact = (props) => {
   };
 
   return (
-    <section className={`py-12 dark:bg-black dark:text-white ${isDark == "dark" ? " dark" : ""}`} id="contact">
+    <section className={`py-12 px-2 sm:px-0 dark:bg-black dark:text-white ${isDark == "dark" ? " dark" : ""}`} id="contact">
       <h2 className="text-2xl font-bold text-center mb-6">Contact</h2>
-      <form className="max-w-md mx-auto space-y-4" onSubmit={sendemail}>
+      <form className="max-w-md w-full mx-auto space-y-4" onSubmit={sendemail}>
         <input
           type="email"
           placeholder="Email"
-          className="w-full px-4 py-2 rounded border-2 dark:border-gray-400"
+          className="w-full px-3 py-2 sm:px-4 rounded border-2 dark:border-gray-400 text-sm sm:text-base"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
         <textarea
           placeholder="Message"
-          className="w-full px-4 py-2 rounded border-2 border-gray-400"
+          className="w-full px-3 py-2 sm:px-4 rounded border-2 border-gray-400 text-sm sm:text-base"
           rows="5"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -46,7 +46,7 @@ const Contact = (props) => {
         />
         <button
           type="submit"
-          className="w-full bg-lime-400 py-2 rounded hover:brightness-110 cursor-pointer"
+          className="w-full bg-lime-400 py-2 rounded hover:brightness-110 cursor-pointer text-sm sm:text-base"
           disabled={loading}
         >
           {loading ? "Sending..." : "Send"}

@@ -24,10 +24,10 @@ const projects = [
 const ProofOfWork = (props) => {
   const {isDark} = props
   return (
-    <section className={`py-12 pl-96 pr-96  dark:bg-black ${isDark == 'dark' ? ' dark' : ''}`} id="proof-of-work">
+    <section className={`py-12 px-2 sm:px-0 dark:bg-black ${isDark == 'dark' ? ' dark' : ''}`} id="proof-of-work">
       <h2 className="text-2xl font-bold text-center mb-8">Proof of Work</h2>
       <div className="flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-fit">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl">
           {projects.map((p, i) => (
             <Card  key={i} {...p} />
           ))}
@@ -41,7 +41,7 @@ const Card = ({ name, desc, tech, link, code, icon }) => {
   // Gradient border animation using CSS
   return (
     <div
-      className="relative p-0.5  rounded-xl group transition-shadow hover:shadow-2xl overflow-hidden "
+      className="relative p-0.5 rounded-xl group transition-shadow hover:shadow-2xl overflow-hidden w-full min-w-[220px] max-w-xs mx-auto"
       style={{ zIndex: 1 }}
     >
       {/* Revolving gradient border */}
