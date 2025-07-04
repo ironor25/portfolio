@@ -26,9 +26,9 @@ const Header = (props) => {
   const { isDark, setIsDark } = props;
 
   return (
-    <div className="p-3 flex justify-center z-20 text-black dark:text-white transition-colors duration-300">
-      <nav className="max-w-2xl w-full rounded-3xl p-2 sm:p-3 px-2 sm:px-4 border-2 border-black dark:border-white fixed backdrop-blur-lg flex space-x-2 sm:space-x-6 justify-center">
-        <div className="flex space-x-2 sm:space-x-4 items-center">
+    <div className="p-1 sm:p-3 flex justify-center z-20 text-black dark:text-white transition-colors duration-300">
+      <nav className="max-w-2xl w-full rounded-3xl py-1 sm:py-3 px-1 sm:px-4 border-2 border-black dark:border-white fixed backdrop-blur-lg flex overflow-x-auto whitespace-nowrap space-x-1 sm:space-x-6 justify-center">
+        <div className="flex items-center space-x-1 sm:space-x-4 w-auto">
           {/* Navigation Links */}
           <a href="#hero" className={iconLinkClass} aria-label="Home">
             <House />
