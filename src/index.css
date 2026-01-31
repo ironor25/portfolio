@@ -1,3 +1,12 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --font-bitcount: "Bitcount Single", system-ui;
+}
+@theme {
+  /* This makes SN Pro the default font for your whole app */
+  --font-sans: "SN Pro", ui-sans-serif, system-ui, sans-serif;
+
+  --font-bricolage: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+}

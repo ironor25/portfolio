@@ -13,23 +13,25 @@ import { Routes,Route } from 'react-router-dom';
 const App = () => {
 
   
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState("dark");
   return (
-    <div className={`dark:bg-black flex flex-col h-screen w-full ${isDark == 'dark' ? ' dark' : ''}`}>
-      <Header isDark={isDark} setIsDark={setIsDark} />
-      <div className=''>
+    <div className={`dark:bg-black h-full w-full ${isDark == "dark" ? ' dark' : ''}`}>
+      
+      <div className='max-w-full flex flex-col justify-center'>
+        <Header isDark={isDark} setIsDark={setIsDark} />
         <Hero isDark={isDark} />
         <ProofOfWork isDark={isDark} />
         <Skills isDark={isDark} />
         <Education isDark={isDark} />
         <Contact isDark={isDark} />
+      </div>
         <Routes>
           <Route path="/proof-of-work" element={<ProofOfWork isDark={isDark} />} />
           <Route path="/skills" element={<Skills isDark={isDark} />} />
           <Route path="/education" element={<Education isDark={isDark} />} />
           <Route path="/contact" element={<Contact isDark={isDark} />} />
         </Routes>
-      </div>
+      
     </div>
   );
 };

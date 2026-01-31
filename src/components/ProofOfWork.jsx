@@ -24,12 +24,12 @@ const projects = [
 const ProofOfWork = (props) => {
   const {isDark} = props
   return (
-    <section className={`py-12 px-2 sm:px-0 dark:bg-black ${isDark == 'dark' ? ' dark' : ''}`} id="proof-of-work">
-      <h2 className="text-2xl font-bold text-center mb-8">Proof of Work</h2>
+    <section className={`py-40 px-2 sm:px-0 dark:bg-black dark:text-white ${isDark == 'dark' ? ' dark' : ''}`} id="proof-of-work">
+      <h2 className="text-4xl font-bricolage font-bold text-center mb-8">Proof of Work</h2>
       <div className="flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl">
+        <div className="grid  sm:grid-cols-2 gap-6 w-full max-w-3xl">
           {projects.map((p, i) => (
-            <Card  key={i} {...p} />
+            <Card  key={i} {...p} isDark={isDark} />
           ))}
         </div>
       </div>
@@ -37,25 +37,18 @@ const ProofOfWork = (props) => {
   );
 };
 
-const Card = ({ name, desc, tech, link, code, icon }) => {
+const Card = ({ name, desc, tech, link, code, icon ,isDark}) => {
   // Gradient border animation using CSS
   return (
     <div
-      className="relative p-0.5 rounded-xl group transition-shadow hover:shadow-2xl overflow-hidden w-full min-w-[220px] max-w-xs mx-auto"
+      className="relative rounded-xl border border-b-2 border-r-2 transition-shadow hover:shadow-2xl overflow-hidden w-full min-w-[220px]  mx-auto h-full"
       style={{ zIndex: 1 }}
     >
       {/* Revolving gradient border */}
       <span
         className="absolute h-90 w-1/5 inset-0 rounded-xl pointer-events-none"
-        style={{
-          background:
-            'conic-gradient(from 0deg, #00e6ff 20%, #00ff85 50%, #ffe600 75%, #ff00ea 100%)',
-          animation: 'spin 5s linear infinite',
-          zIndex: 5,
-          display: 'block',
-        }}
       ></span>
-      <SpotlightCard className='z-6 cursor-pointer bg-white dark:bg-black'>
+      <SpotlightCard className='z-6 cursor-pointer bg-white dark:bg-black' spotlightColor={isDark? "rgba(123, 232, 217, 0.25)":"rgba(252, 142, 8, 0.25)"}>
         {/* Project Icon */}
         
         <div className="text-4xl">
@@ -98,21 +91,9 @@ const Card = ({ name, desc, tech, link, code, icon }) => {
             Source Code
           </a>
         </div>
-      </SpotlightCard>
+      </SpotlightCard >
       {/* Gradient border animation keyframes */}
-      <style>{`
-        @keyframes spin {
-  0% {
-    transform: rotateZ(0deg);
-  }
-
-  0% {
-    transform: rotateZ(360deg);
-  }
-}
-
-      `}</style>
-    </div>
+      </div>
   );
 };
 

@@ -23,12 +23,12 @@ const Hero = (props) => {
           alt='Profile'
         />
       </div>
-      <h1 className="text-2xl sm:text-5xl mt-2 font-bold tracking-tight text-center text-black dark:text-white transition-colors duration-300">
+      <h1 className="text-6xl font-bitcount mt-10 tracking-tight text-center text-black dark:text-white transition-colors duration-300">
         {text}
       </h1>
-      <p className="mt-4 text-zinc-700 dark:text-zinc-300 font-medium transition-colors duration-300 text-sm sm:text-base">I follow one concept only</p>
-      <p className="text-zinc-700 dark:text-zinc-300 font-medium transition-colors duration-300 text-sm sm:text-base">Learn Fast , Implement Fast , Fail Fast</p>
-      <p className="text-zinc-700 dark:text-zinc-300 font-medium transition-colors duration-300 text-sm sm:text-base">I love doing hard things first, so if you're looking or working on something great.</p>
+      <p className="mt-4 text-zinc-700 dark:text-zinc-300 font-medium font-sn-pro transition-colors duration-300 text-lg ">I follow one concept only</p>
+      <p className="text-zinc-700 dark:text-zinc-300 font-medium font-sn-pro transition-colors duration-300 text-lg ">Learn Fast , Implement Fast , Fail Fast</p>
+      <p className="text-zinc-700 dark:text-zinc-300 font-medium font-sn-pro transition-colors duration-300 text-lg ">I love doing hard things first, so if you're looking or working on something great.</p>
       <div className="mt-6 flex justify-center gap-2 sm:gap-4 flex-wrap">
         <a
           href="#contact"

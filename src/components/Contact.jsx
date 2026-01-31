@@ -26,8 +26,8 @@ const Contact = (props) => {
 
   return (
     <section className={`py-12 px-2 sm:px-0 dark:bg-black dark:text-white ${isDark == "dark" ? " dark" : ""}`} id="contact">
-      <h2 className="text-2xl font-bold text-center mb-6">Contact</h2>
-      <form className="max-w-md w-full mx-auto space-y-4" onSubmit={sendemail}>
+      <h2 className="text-4xl font-bold font-bricolage text-center mb-6">Contact</h2>
+      <form className="max-w-3xl w-full mx-auto space-y-4" onSubmit={sendemail}>
         <input
           type="email"
           placeholder="Email"
