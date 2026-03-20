@@ -32,7 +32,7 @@ const projects = [
     desc: "AI-powered 2D animation generator that transforms user prompts into smooth, dynamic animations, enabling effortless creation of visually engaging content without manual design.",
     tech: ["Python", "FastAPI","React", "Langchain","Ollama"],
     link: "https://drive.google.com/file/d/1Am1_m9QsFZdU-jp2KCimgXAc44anNNpC/view?usp=sharing",
-    code: "https://github.com/ironor25/Flash_Wallet.git",
+    code: "https://github.com/ironor25/Prompt-To-Animation.git",
     icon: "/animation.png"
   }
 ];
