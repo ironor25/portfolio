@@ -6,6 +6,8 @@ import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import { Routes,Route } from 'react-router-dom';
+import Experience from './components/Experience';
+import Opensource from './components/Opensource';
 
 
 
@@ -21,6 +23,8 @@ const App = () => {
         <Header isDark={isDark} setIsDark={setIsDark} />
         <Hero isDark={isDark} />
         <ProofOfWork isDark={isDark} />
+        <Experience isDark={isDark}/>
+        <Opensource isDark={isDark}/>
         <Skills isDark={isDark} />
         <Education isDark={isDark} />
         <Contact isDark={isDark} />
