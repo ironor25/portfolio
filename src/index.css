@@ -1,12 +1,310 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
 @theme {
-  --font-bitcount: "Bitcount Single", system-ui;
-}
-@theme {
-  /* This makes SN Pro the default font for your whole app */
-  --font-sans: "SN Pro", ui-sans-serif, system-ui, sans-serif;
+  --color-canvas: #0a0a0a;
+  --color-surface-soft: #121212;
+  --color-surface-card: #1a1a1a;
+  --color-surface-elevated: #242424;
+  --color-surface-yellow: #faff69;
+  --color-primary: #faff69;
+  --color-primary-active: #e6eb52;
+  --color-primary-disabled: #3a3a1f;
+  --color-hairline: #2a2a2a;
+  --color-hairline-strong: #3a3a3a;
+  --color-ink: #ffffff;
+  --color-on-dark: #ffffff;
+  --color-on-primary: #0a0a0a;
+  --color-on-yellow: #0a0a0a;
+  --color-body: #cccccc;
+  --color-body-strong: #e6e6e6;
+  --color-muted: #888888;
+  --color-muted-soft: #5a5a5a;
+  --color-accent-emerald: #22c55e;
+  --color-accent-rose: #ef4444;
+  --color-accent-blue: #3b82f6;
 
-  --font-bricolage: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+:root {
+  --canvas: #0a0a0a;
+  --surface-soft: #121212;
+  --surface-card: #1a1a1a;
+  --surface-elevated: #242424;
+  --primary: #faff69;
+  --primary-active: #e6eb52;
+  --hairline: #2a2a2a;
+  --hairline-strong: #3a3a3a;
+  --ink: #ffffff;
+  --body: #cccccc;
+  --body-strong: #e6e6e6;
+  --muted: #888888;
+  --muted-soft: #5a5a5a;
+  --accent-emerald: #22c55e;
+  --accent-rose: #ef4444;
+  --accent-blue: #3b82f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #cccccc;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+/* Typography Utility Classes */
+.display-xl {
+  font-family: var(--font-sans);
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2.5px;
+  color: #ffffff;
+}
+
+.display-lg {
+  font-family: var(--font-sans);
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  color: #ffffff;
+}
+
+.display-md {
+  font-family: var(--font-sans);
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+}
+
+.display-sm {
+  font-family: var(--font-sans);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: #ffffff;
+}
+
+.title-lg {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+}
+
+.title-md {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+.title-sm {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+.stat-display {
+  font-family: var(--font-sans);
+  font-size: clamp(38px, 5vw, 56px);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -1.5px;
+  color: #faff69;
+}
+
+.body-md {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #cccccc;
+}
+
+.body-sm {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #888888;
+}
+
+.caption {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.caption-uppercase {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.code-font {
+  font-family: var(--font-mono);
+}
+
+/* Component Styles */
+.btn-primary {
+  background-color: #faff69;
+  color: #0a0a0a;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 8px;
+  padding: 12px 20px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #e6eb52;
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-secondary {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 8px;
+  padding: 12px 20px;
+  height: 40px;
+  border: 1px solid #2a2a2a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #242424;
+  border-color: #3a3a3a;
+}
+
+.badge-pill {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+  border: 1px solid #2a2a2a;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 9999px;
+  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.badge-yellow {
+  background-color: #faff69;
+  color: #0a0a0a;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.surface-card-base {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+}
+
+.text-input-field {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.text-input-field:focus {
+  border-color: #faff69;
+}
+
+.text-input-field::placeholder {
+  color: #5a5a5a;
+}
+
+/* Subtle grid lines background */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(42, 42, 42, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(42, 42, 42, 0.25) 1px, transparent 1px);
 }

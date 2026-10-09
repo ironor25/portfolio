@@ -1,41 +1,53 @@
-import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import TechStackTicker from './components/TechStackTicker';
 import ProofOfWork from './components/ProofOfWork';
+import Opensource from './components/Opensource';
+import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Education from './components/Education';
+import CtaBandYellow from './components/CtaBandYellow';
 import Contact from './components/Contact';
-import { Routes,Route } from 'react-router-dom';
-import Experience from './components/Experience';
-import Opensource from './components/Opensource';
-
-
-
+import Footer from './components/Footer';
 
 const App = () => {
-
-  
-  const [isDark, setIsDark] = useState("dark");
   return (
-    <div className={`dark:bg-black h-full w-full ${isDark == "dark" ? ' dark' : ''}`}>
-      
-      <div className='max-w-full flex flex-col justify-center'>
-        <Header isDark={isDark} setIsDark={setIsDark} />
-        <Hero isDark={isDark} />
-        <ProofOfWork isDark={isDark} />
-        <Experience isDark={isDark}/>
-        <Opensource isDark={isDark}/>
-        <Skills isDark={isDark} />
-        <Education isDark={isDark} />
-        <Contact isDark={isDark} />
-      </div>
-        <Routes>
-          <Route path="/proof-of-work" element={<ProofOfWork isDark={isDark} />} />
-          <Route path="/skills" element={<Skills isDark={isDark} />} />
-          <Route path="/education" element={<Education isDark={isDark} />} />
-          <Route path="/contact" element={<Contact isDark={isDark} />} />
-        </Routes>
-      
+    <div className="bg-[#0a0a0a] min-h-screen text-[#ffffff] font-sans antialiased selection:bg-[#faff69] selection:text-[#0a0a0a]">
+      {/* Pinned Top Navigation */}
+      <Header />
+
+      {/* Main Content Sections */}
+      <main className="w-full flex flex-col">
+        {/* Hero Section with 7-5 split and interactive ClickHouse SQL query terminal */}
+        <Hero />
+
+        {/* Tech Stack Ticker Strip */}
+        <TechStackTicker />
+
+        {/* Proof of Work (Projects) */}
+        <ProofOfWork />
+
+        {/* Open Source Contributions */}
+        <Opensource />
+
+        {/* Career Experience */}
+        <Experience />
+
+        {/* Architecture & Skills Matrix */}
+        <Skills />
+
+        {/* Academic Foundation */}
+        <Education />
+
+        {/* Pre-Footer Electric Yellow CTA Band */}
+        <CtaBandYellow />
+
+        {/* Transmission & Contact Terminal */}
+        <Contact />
+      </main>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
